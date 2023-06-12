@@ -109,15 +109,15 @@ public class Interpreter {
                 throw new InterpreterException("Function call with wrong number of arguments: " + node.getName().getName());
             }
             Scope newScope = new Scope(scope);
-            int i = 0;
 
+            int i = 0;
             while (i < paramsLength) {
                 Object argValue = (i < argsLength) ? exec(args.get(i), newScope) : null;
                 newScope.addVar(params.get(i).toString(), argValue);
                 i++;
             }
-
             StmtListNode stmts = (StmtListNode) function.getStatements();
+
             try {
                 return exec(stmts, newScope);
             } catch (ReturnValue rv) {
@@ -192,7 +192,8 @@ public class Interpreter {
     }
 
     public static Object exec(ReturnNode node, Scope scope) throws InterpreterException {
-        throw new ReturnValue(exec(node.getExpr(), scope));
+        Object returnExpr = exec(node.getExpr(), scope);
+        throw new ReturnValue(returnExpr);
     }
 
     public static Object exec(StmtListNode node, Scope scope) throws InterpreterException {
@@ -200,7 +201,7 @@ public class Interpreter {
         for (StmtNode stmt: node.getStmts()) {
             exec(stmt, scope);
         }
-        return null;
+        return "end";
     }
 
     public static Object exec(ValueNode node, Scope scope) throws InterpreterException {
