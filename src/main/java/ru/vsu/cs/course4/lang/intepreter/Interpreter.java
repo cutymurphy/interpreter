@@ -94,34 +94,46 @@ public class Interpreter {
     }
 
     public static Object exec(FuncCallNode node, Scope scope) throws InterpreterException {
+
         Object object = exec(node.getName(), scope);
+
         if (object instanceof FuncNode) {
             FuncNode function = (FuncNode) object;
-            StmtNode params = function.getParams();
-            StmtNode args = node.getParams();
 
-            if (params.childs().size() != args.childs().size()) {
+            StmtNode params = function.getParams();
+            int paramsLength = params.childs().size();
+            StmtNode args = node.getParams();
+            int argsLength = args.childs().size();
+
+            if (paramsLength < argsLength) {
                 throw new InterpreterException("Function call with wrong number of arguments: " + node.getName().getName());
             }
             Scope newScope = new Scope(scope);
-            for (int i = 0; i < params.childs().size(); i++) {
-                newScope.addVar(params.get(i).toString(), exec(args.get(i), newScope));
+            int i = 0;
+
+            while (i < paramsLength) {
+                Object argValue = (i < argsLength) ? exec(args.get(i), newScope) : null;
+                newScope.addVar(params.get(i).toString(), argValue);
+                i++;
             }
+
             StmtListNode stmts = (StmtListNode) function.getStatements();
             try {
                 return exec(stmts, newScope);
             } catch (ReturnValue rv) {
                 return rv.getValue();
             }
+
         } else if (object instanceof Method) {
             Method method = (Method) object;
             try {
                 StmtNode params = node.getParams();
-                Object[] args = new Object[params.childs().size()];
-                for (int i = 0; i < params.childs().size(); i++) {
-                    args[i] = exec(params.get(i), scope);
+                int paramsLength = params.childs().size();
+                Object[] arrayOfArgs = new Object[paramsLength];
+                for (int i = 0; i < paramsLength; i++) {
+                    arrayOfArgs[i] = exec(params.get(i), scope);
                 }
-                return method.invoke(null, args);
+                return method.invoke(null, arrayOfArgs);
             } catch (Exception e) {
                 throw new InterpreterException("Error invoking runtime function: " + node.getName().getName());
             }
@@ -133,6 +145,7 @@ public class Interpreter {
             } catch (Exception e) {
                 throw new InterpreterException("Error while returning field");
             }
+
         } else {
             throw new InterpreterException("Error while calling Func");
         }
