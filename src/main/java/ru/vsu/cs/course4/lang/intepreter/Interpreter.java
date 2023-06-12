@@ -4,7 +4,6 @@ import ru.vsu.cs.course4.lang.ast.*;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
-import java.util.Objects;
 
 public class Interpreter {
     public static Object exec(AstNode node, Scope scope) throws InterpreterException {
@@ -111,8 +110,8 @@ public class Interpreter {
             StmtListNode stmts = (StmtListNode) function.getStatements();
             try {
                 return exec(stmts, newScope);
-            } catch (RuntimeException ex) {
-                return ex.getMessage();
+            } catch (ReturnValue rv) {
+                return rv.getValue();
             }
         } else if (object instanceof Method) {
             Method method = (Method) object;
@@ -180,7 +179,7 @@ public class Interpreter {
     }
 
     public static Object exec(ReturnNode node, Scope scope) throws InterpreterException {
-        throw new RuntimeException(Objects.requireNonNull(exec(node.getExpr(), scope)).toString());
+        throw new ReturnValue(exec(node.getExpr(), scope));
     }
 
     public static Object exec(StmtListNode node, Scope scope) throws InterpreterException {
