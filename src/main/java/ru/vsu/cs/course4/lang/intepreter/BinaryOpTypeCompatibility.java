@@ -7,6 +7,10 @@ public class BinaryOpTypeCompatibility {
             return (Integer) leftValue * (Integer) rightValue;
         } else if (leftValue instanceof Double && rightValue instanceof Double) {
             return (Double) leftValue * (Double) rightValue;
+        } else if (leftValue instanceof Integer && rightValue instanceof Double) {
+            return (Integer) leftValue * (Double) rightValue;
+        } else if (leftValue instanceof Double && rightValue instanceof Integer) {
+            return (Double) leftValue * (Integer) rightValue;
         }
         throw new InterpreterException("The operation cannot be performed.");
     }
@@ -16,6 +20,10 @@ public class BinaryOpTypeCompatibility {
             return (Integer) leftValue / (Integer) rightValue;
         } else if (leftValue instanceof Double && rightValue instanceof Double) {
             return (Double) leftValue / (Double) rightValue;
+        } else if (leftValue instanceof Integer && rightValue instanceof Double) {
+            return (Integer) leftValue / (Double) rightValue;
+        } else if (leftValue instanceof Double && rightValue instanceof Integer) {
+            return (Double) leftValue / (Integer) rightValue;
         }
         throw new InterpreterException("The operation cannot be performed.");
     }
@@ -25,18 +33,38 @@ public class BinaryOpTypeCompatibility {
             return (Integer) leftValue % (Integer) rightValue;
         } else if (leftValue instanceof Double && rightValue instanceof Double) {
             return (Double) leftValue % (Double) rightValue;
+        } else if (leftValue instanceof Integer && rightValue instanceof Double) {
+            return (Integer) leftValue % (Double) rightValue;
+        } else if (leftValue instanceof Double && rightValue instanceof Integer) {
+            return (Double) leftValue % (Integer) rightValue;
         }
         throw new InterpreterException("The operation cannot be performed.");
     }
 
     public static Object add(Object leftValue, Object rightValue) throws InterpreterException {
+
         if (leftValue instanceof Integer && rightValue instanceof Integer) {
             return (Integer) leftValue + (Integer) rightValue;
         } else if (leftValue instanceof Double && rightValue instanceof Double) {
             return (Double) leftValue + (Double) rightValue;
+        } else if (leftValue instanceof Integer && rightValue instanceof Double) {
+            return (Integer) leftValue + (Double) rightValue;
+        } else if (leftValue instanceof Double && rightValue instanceof Integer) {
+            return (Double) leftValue + (Integer) rightValue;
+
         } else if (leftValue instanceof String && rightValue instanceof String) {
             return leftValue + (String) rightValue;
+
+        } else if (leftValue instanceof Integer && rightValue instanceof String) {
+            return leftValue + (String) rightValue;
+        } else if (leftValue instanceof String && rightValue instanceof Integer) {
+            return (String) leftValue + rightValue;
+        } else if (leftValue instanceof Double && rightValue instanceof String) {
+            return leftValue + (String) rightValue;
+        } else if (leftValue instanceof String && rightValue instanceof Double) {
+            return (String) leftValue + rightValue;
         }
+
         throw new InterpreterException("The operation cannot be performed.");
     }
 
@@ -45,6 +73,10 @@ public class BinaryOpTypeCompatibility {
             return (Integer) leftValue - (Integer) rightValue;
         } else if (leftValue instanceof Double && rightValue instanceof Double) {
             return (Double) leftValue - (Double) rightValue;
+        } else if (leftValue instanceof Integer && rightValue instanceof Double) {
+            return (Integer) leftValue - (Double) rightValue;
+        } else if (leftValue instanceof Double && rightValue instanceof Integer) {
+            return (Double) leftValue - (Integer) rightValue;
         }
         throw new InterpreterException("The operation cannot be performed.");
     }
@@ -54,6 +86,10 @@ public class BinaryOpTypeCompatibility {
             return (Integer) leftValue < (Integer) rightValue;
         } else if (leftValue instanceof Double && rightValue instanceof Double) {
             return (Double) leftValue < (Double) rightValue;
+        } else if (leftValue instanceof Integer && rightValue instanceof Double) {
+            return (Integer) leftValue < (Double) rightValue;
+        } else if (leftValue instanceof Double && rightValue instanceof Integer) {
+            return (Double) leftValue < (Integer) rightValue;
         }
         throw new InterpreterException("The operation cannot be performed.");
     }
@@ -63,6 +99,10 @@ public class BinaryOpTypeCompatibility {
             return (Integer) leftValue > (Integer) rightValue;
         } else if (leftValue instanceof Double && rightValue instanceof Double) {
             return (Double) leftValue > (Double) rightValue;
+        } else if (leftValue instanceof Integer && rightValue instanceof Double) {
+            return (Integer) leftValue > (Double) rightValue;
+        } else if (leftValue instanceof Double && rightValue instanceof Integer) {
+            return (Double) leftValue > (Integer) rightValue;
         }
         throw new InterpreterException("The operation cannot be performed.");
     }
@@ -72,6 +112,10 @@ public class BinaryOpTypeCompatibility {
             return (Integer) leftValue <= (Integer) rightValue;
         } else if (leftValue instanceof Double && rightValue instanceof Double) {
             return (Double) leftValue <= (Double) rightValue;
+        } else if (leftValue instanceof Integer && rightValue instanceof Double) {
+            return (Integer) leftValue <= (Double) rightValue;
+        } else if (leftValue instanceof Double && rightValue instanceof Integer) {
+            return (Double) leftValue <= (Integer) rightValue;
         }
         throw new InterpreterException("The operation cannot be performed.");
     }
@@ -81,6 +125,10 @@ public class BinaryOpTypeCompatibility {
             return (Integer) leftValue >= (Integer) rightValue;
         } else if (leftValue instanceof Double && rightValue instanceof Double) {
             return (Double) leftValue >= (Double) rightValue;
+        } else if (leftValue instanceof Integer && rightValue instanceof Double) {
+            return (Integer) leftValue >= (Double) rightValue;
+        } else if (leftValue instanceof Double && rightValue instanceof Integer) {
+            return (Double) leftValue >= (Integer) rightValue;
         }
         throw new InterpreterException("The operation cannot be performed.");
     }
@@ -88,6 +136,8 @@ public class BinaryOpTypeCompatibility {
     public static Object equals(Object leftValue, Object rightValue) throws InterpreterException {
         if (leftValue instanceof Integer && rightValue instanceof Integer
         || leftValue instanceof Double && rightValue instanceof Double
+        || leftValue instanceof Integer && rightValue instanceof Double
+        || leftValue instanceof Double && rightValue instanceof Integer
         || leftValue instanceof String && rightValue instanceof String
         || leftValue instanceof Boolean && rightValue instanceof Boolean) {
             return leftValue.equals(rightValue);
@@ -97,9 +147,11 @@ public class BinaryOpTypeCompatibility {
 
     public static Object unequals(Object leftValue, Object rightValue) throws InterpreterException {
         if (leftValue instanceof Integer && rightValue instanceof Integer
-                || leftValue instanceof Double && rightValue instanceof Double
-                || leftValue instanceof String && rightValue instanceof String
-                || leftValue instanceof Boolean && rightValue instanceof Boolean) {
+        || leftValue instanceof Double && rightValue instanceof Double
+        || leftValue instanceof Integer && rightValue instanceof Double
+        || leftValue instanceof Double && rightValue instanceof Integer
+        || leftValue instanceof String && rightValue instanceof String
+        || leftValue instanceof Boolean && rightValue instanceof Boolean) {
             return !leftValue.equals(rightValue);
         }
         throw new InterpreterException("The operation cannot be performed.");

@@ -5,164 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b51bc32b-9370-4828-88a8-140326bdb18d" name="Default Changelist" comment="ReturnValue и некоторые другие правки">
-      <change afterPath="$PROJECT_DIR$/.idea/interpreter.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/intepreter/ReturnValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/input/test07.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/interpreter.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src-gen/main/java/ru/vsu/cs/course4/lang/AbstractCharStream.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src-gen/main/java/ru/vsu/cs/course4/lang/CharStream.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src-gen/main/java/ru/vsu/cs/course4/lang/ParseException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src-gen/main/java/ru/vsu/cs/course4/lang/Parser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src-gen/main/java/ru/vsu/cs/course4/lang/ParserConstants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src-gen/main/java/ru/vsu/cs/course4/lang/ParserTokenManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src-gen/main/java/ru/vsu/cs/course4/lang/SimpleCharStream.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src-gen/main/java/ru/vsu/cs/course4/lang/Token.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src-gen/main/java/ru/vsu/cs/course4/lang/TokenMgrException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/intepreter/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/intepreter/Interpreter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/javacc/ru/vsu/cs/course4/compiler/Parser.jj" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/javacc/ru/vsu/cs/course4/lang/Parser.jj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/input/test01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/input/test01.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/input/test02.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/input/test02.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/input/test03.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/input/test03.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/input/test04.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/input/test04.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/input/test05.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/input/test05.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/input/test06.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/input/test06.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MathExprLangJavaCC-1.0-all.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MathExprLangJavaCC-1.0-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MathExprLangJavaCC-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/allclasses-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/allclasses-noframe.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/argfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/constant-values.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/deprecated-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/help-doc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/index-all.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/javadoc.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/options" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/overview-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/overview-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/overview-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/package-list" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/AbstractCharStream.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/CharStream.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ParseException.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/Parser.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ParserConstants.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ParserTokenManager.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/Program.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/SimpleCharStream.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/Token.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/TokenMgrException.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/AssignNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/AstNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/BinaryOpNode.BinOp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/BinaryOpNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/DoWhileNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/ElseNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/ExprNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/ForNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/FuncCallExprNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/FuncCallStmtNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/FuncNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/IdentNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/IfNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/InputNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/ParamsListNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/PrintNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/ReturnNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/SimpleWhileNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/StmtListNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/StmtNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/ValueNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/WhileNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/AssignNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/AstNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/BinaryOpNode.BinOp.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/BinaryOpNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/DoWhileNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/ElseNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/ExprNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/ForNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/FuncCallExprNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/FuncCallStmtNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/FuncNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/IdentNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/IfNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/InputNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/ParamsListNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/PrintNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/ReturnNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/SimpleWhileNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/StmtListNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/StmtNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/ValueNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/class-use/WhileNode.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/ast/package-use.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/class-use/AbstractCharStream.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/class-use/CharStream.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/class-use/ParseException.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/class-use/Parser.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/class-use/ParserConstants.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/class-use/ParserTokenManager.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/class-use/Program.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/class-use/SimpleCharStream.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/class-use/Token.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/class-use/TokenMgrException.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/ru/vsu/cs/course4/compiler/package-use.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/serialized-form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/apidocs/stylesheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/AbstractCharStream.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/CharStream.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ParseException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/Parser$JJCalls.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/Parser$LookaheadSuccess.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/Parser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ParserConstants.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ParserTokenManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/Program.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/SimpleCharStream.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/Token.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/TokenMgrException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ast/AssignNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ast/AstNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ast/BinaryOpNode$BinOp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ast/BinaryOpNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ast/DoWhileNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ast/ExprNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ast/ForNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ast/FuncCallNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ast/FuncNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ast/IdentNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ast/IfNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ast/ParamsListNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ast/ReturnNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ast/StmtListNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ast/StmtNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ast/ValueNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/ast/WhileNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/intepreter/BinaryOpTypeCompatibility.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/intepreter/Interpreter$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/intepreter/Interpreter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/intepreter/InterpreterException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/intepreter/Runtime.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ru/vsu/cs/course4/lang/intepreter/Scope.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javadoc-bundle-options/javadoc-options-javadoc-resources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/javadoc-bundle-options/package-list" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-javadoc-plugin-stale-data.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/intepreter/BinaryOpTypeCompatibility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/intepreter/BinaryOpTypeCompatibility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/input/test01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/input/test01.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,18 +48,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/dimok/z/vsu/Алгоритмы и структуры данных/Семинары/Сушкова/1/interpreter&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propDebugger&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "D:/OneDrive/Документы/GitHub/interpreter",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propDebugger"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -225,7 +71,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.test07">
+  <component name="RunManager" selected="Application.test01">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -357,6 +203,28 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ReturnValue и некоторые другие правки" />
