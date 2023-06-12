@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b51bc32b-9370-4828-88a8-140326bdb18d" name="Default Changelist" comment="Небольшие правки в test07.txt и в интерпретаторе.">
+    <list default="true" id="b51bc32b-9370-4828-88a8-140326bdb18d" name="Default Changelist" comment="Создала словарь, в который помещаются все методы и поля">
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/intepreter/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/intepreter/Interpreter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/input/test01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/input/test01.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,7 +69,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.test01">
+  <component name="RunManager" selected="Application.test05">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -124,7 +123,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="18" />
       <option name="MAIN_CLASS_NAME" value="ru.vsu.cs.course4.lang.Program" />
       <module name="interpreter" />
-      <option name="PROGRAM_PARAMETERS" value="./test/input/test05.txt" />
+      <option name="PROGRAM_PARAMETERS" value="./test/input/test05.txt -tree" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -219,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686604576262</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Создала словарь, в который помещаются все методы и поля">
+      <created>1686605785947</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1686605785947</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -258,7 +264,8 @@
     <MESSAGE value="Добавлены новые комбинации в BinaryOpTypeCompatibility" />
     <MESSAGE value="Теперь, если кол-во фактических аргументов функции меньше кол-ва формальных, то в качестве недостоющих аргументов передается null." />
     <MESSAGE value="Небольшие правки в test07.txt и в интерпретаторе." />
-    <option name="LAST_COMMIT_MESSAGE" value="Небольшие правки в test07.txt и в интерпретаторе." />
+    <MESSAGE value="Создала словарь, в который помещаются все методы и поля" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создала словарь, в который помещаются все методы и поля" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
