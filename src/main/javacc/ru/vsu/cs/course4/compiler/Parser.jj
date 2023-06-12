@@ -1,0 +1,163 @@
+PARSER_BEGIN(Parser)
+
+package ru.vsu.cs.course4.lang;
+
+import java.util.*;
+
+import ru.vsu.cs.course4.lang.ast.*;
+
+public class Parser {
+
+}
+
+PARSER_END(Parser)
+
+SKIP:  {
+    <WS: " " | "\t" | "\r" | "\n" | "\r\n">
+  | <SINGLE_LINE_COMMENT: "//" (~["\n","\r"])* ("\n"|"\r"|"\r\n")>
+  | <MULTI_LINE_COMMENT: "/*"(~["/"])*  "*""/">
+}
+TOKEN: {
+    <#LETTER: ["a"-"z", "A"-"Z", "_"]>
+  | <#DIGIT: ["0"-"9"]>
+}
+TOKEN: {
+    <INT_VALUE: ("-")? (<DIGIT>)+>
+  | <FLOAT_VALUE: <INT_VALUE> "." (<DIGIT>)* | "." (<DIGIT>)+>
+  | <#ESCAPE: "\\" ["n","t","b","r","f","\\","\"","\'"]>
+  | <CHAR_VALUE: "\'" (~["\'","\\"]|<ESCAPE>) "\'">
+  | <STRING_VALUE: "\"" (~["\""])* "\"">
+}
+TOKEN : {
+    <ACCESS_MODIFIER: "public" | "protected" | "private">
+}
+TOKEN: { /* KEYWORDS - обязательно описываем до <IDENT> */
+    <BRANCH: "branching">
+  | <IF: "if">
+  | <ELSE: "else">
+  | <FOR: "for">
+  | <WHILE: "while">
+  | <DO: "do">
+  | <FUNCTION: "function">
+  | <RETURN: "return">
+}
+TOKEN: {
+    <IDENT: <LETTER>(<LETTER>|<DIGIT>)*>
+}
+
+ValueNode value(): { Token val; } {
+    (
+         val=<INT_VALUE>
+       | val=<FLOAT_VALUE>
+       | val=<STRING_VALUE>
+    )
+    { return new ValueNode(val.image); }
+}
+
+IdentNode ident(): { Token ident; } { ident=<IDENT> { return new IdentNode(ident.image); } }
+
+ExprNode group(): {
+    ExprNode e;
+    IdentNode funcName; ParamsListNode params;
+} {
+    (
+        e=value()
+      | LOOKAHEAD(2) funcName=ident() "(" params=exprList() ")" {
+        e = new FuncCallNode(funcName, params); }
+      | e=ident()
+      | "(" e=expr() ")"
+    )
+    { return e; }
+}
+
+ExprNode mult(): { ExprNode arg1; ExprNode arg2; Token op; } {
+    arg1=group() ( ( op="*" | op="/" | op="%" ) arg2=group() { arg1 = new BinaryOpNode(op.image, arg1, arg2); } )* { return arg1; }
+}
+
+ExprNode add(): { ExprNode arg1; ExprNode arg2; Token op; } {
+    arg1=mult() ( ( op="+" | op="-" ) arg2=mult() { arg1 = new BinaryOpNode(op.image, arg1, arg2); } )* { return arg1; }
+}
+
+ExprNode compare1(): { ExprNode arg1; ExprNode arg2; Token op; } {
+    arg1=add() ( ( op=">" | op="<" | op=">=" | op="<=") arg2=add() { arg1 = new BinaryOpNode(op.image, arg1, arg2); } )* { return arg1; }
+}
+
+ExprNode compare2(): { ExprNode arg1; ExprNode arg2; Token op; } {
+    arg1=compare1() ( ( op="==" | op="!=") arg2=compare1() { arg1 = new BinaryOpNode(op.image, arg1, arg2); } )* { return arg1; }
+}
+
+ExprNode logAnd(): { ExprNode arg1; ExprNode arg2; Token op; } {
+    arg1=compare2() ( op="&&" arg2=compare2() { arg1 = new BinaryOpNode(op.image, arg1, arg2); } )* { return arg1; }
+}
+
+ExprNode logOr(): { ExprNode arg1; ExprNode arg2; Token op; } {
+    arg1=logAnd() ( op="||" arg2=logAnd() { arg1 = new BinaryOpNode(op.image, arg1, arg2); } )* { return arg1; }
+}
+
+ExprNode expr(): { ExprNode r; } { r=logOr() { return r; } }
+
+StmtNode statement(): { StmtNode stmt; } {
+    stmt=stmt() { return stmt; } }
+
+StmtNode returnStmt(): { ExprNode expr; } {
+    <RETURN> expr=expr() ";" { return new ReturnNode(expr); } }
+
+AssignNode assign(): { IdentNode ident; ExprNode expr; } {
+    ident=ident() "=" expr=expr() { return new AssignNode(ident, expr); } }
+
+StmtNode stmt(): {
+    IdentNode ident; ExprNode expr; StmtNode statement;
+    AssignNode assign;
+    StmtNode ifStmt; StmtNode elseStmt = null;
+    AssignNode init = null; ExprNode cond = null; AssignNode step = null; StmtNode forStmt;
+    IdentNode funcName; ParamsListNode params; StmtNode stmts;
+    ExprNode returnExpr = null;
+    } {
+          <IF> "(" expr=expr() ")" ifStmt=stmt() [<ELSE> elseStmt=stmt()] {
+            return new IfNode(expr, ifStmt, elseStmt); }
+
+        | <FOR> "(" [init=assign()] ";" [cond=expr()] ";" [step=assign()] ")" forStmt=stmt() {
+            return new ForNode(init, cond, step, forStmt); }
+
+        | <WHILE> "(" cond=expr() ")" statement=stmt() {
+            return new WhileNode(cond, statement); }
+
+        | <DO> statement=stmt() <WHILE> "(" cond=expr() ")" ";" {
+            return new DoWhileNode(cond, statement); }
+
+        | <FUNCTION> funcName=ident() "(" params=exprList() ")"
+          "{" stmts=stmtList() "}" {
+            return new FuncNode(funcName, params, stmts); }
+
+        | "{" stmts=stmtList() "}" {
+            return new StmtListNode(stmts);
+        }
+
+        | "return" [ returnExpr=expr() ] {
+            return new ReturnNode(returnExpr); }
+
+        | LOOKAHEAD(2) funcName=ident() "(" params=exprList() ")" ";" {
+            return new FuncCallNode(funcName, params); }
+
+        | ident=ident() "=" expr=expr() ";" {
+            return new AssignNode(ident, expr); }
+    }
+
+StmtNode stmtList(): { List<StmtNode> list = new ArrayList<>(); } {
+    ( { StmtNode stmt; } stmt=stmt() [";"] { list.add(stmt); } )*
+    { return new StmtListNode(list); }
+}
+
+ParamsListNode exprList(): { List<ExprNode> list = new ArrayList<>(); } {
+    ( { ExprNode item; } item=expr() { list.add(item); }
+        ( "," { item=expr(); { list.add(item); } } )* )?
+    { return new ParamsListNode(list); }
+}
+
+StmtNode program(): { StmtNode program; } {
+    program=stmtList() <EOF> { return program; }
+}
+
+AstNode start(): { AstNode program; } {
+    program = program() { return program; }
+}

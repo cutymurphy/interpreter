@@ -1,0 +1,18 @@
+/* 2nd example of return-stmt WITH the return result */
+
+str = "Dasha";
+
+function concatenate(str, times) {
+    result = "";
+    for (i = 1; i <= times; i = i + 1) {
+        if (i != times) {
+            result = result + str + " ";
+        } else {
+            result = result + str;
+        }
+    }
+    return result;
+}
+
+newStr = concatenate(str, 3);
+println(newStr);

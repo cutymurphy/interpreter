@@ -1,0 +1,18 @@
+/* This example makes it clear why we're using the new Scope.
+The variable a is local to the function, not global. */
+
+a = 99;
+
+function func(a) {
+    while (a != 0) {
+        if (a % 5 == 0) {
+            if (a % 2 == 0) {
+                println(a);
+                return;
+            }
+        }
+        a = a - 1;
+    }
+}
+
+func(a);

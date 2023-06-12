@@ -1,0 +1,14 @@
+/* 1st example of return-stmt WITH the return result */
+
+a = 6;
+b = 8;
+function minimum(num1, num2) {
+    min = 0;
+    if (num1 < num2) {
+        return num1;
+    } else {
+        return num2;
+    }
+}
+c = minimum(a, b);
+println(c);

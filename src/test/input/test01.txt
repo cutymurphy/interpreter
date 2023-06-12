@@ -1,0 +1,13 @@
+/* Just some math operations */
+
+a = PI();
+
+print("Enter the number: ");  /* for example 9.0 */
+inpNum = toDouble(input());
+b = sqrt(inpNum);
+
+println(a);
+println(floor(a));
+println(ceil(a));
+a = b;
+println(a);

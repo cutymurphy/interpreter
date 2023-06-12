@@ -1,0 +1,18 @@
+/* Example for return-stmt WITHOUT the return result */
+
+str = "Dasha";
+
+function doubleStr(str, times) {
+    if (times < 1) {
+        println("Can't double");
+        return;
+    }
+    print("Doubled " + toString(times) + " times '" + str + "' ");
+    for (i = 0; i < times; i = i + 1) {
+        str = str + " " + str;
+    }
+    println("and got this: '" + str + "'");
+}
+
+doubleStr(str, 1); doubleStr(str, 1);
+doubleStr(str, -1);

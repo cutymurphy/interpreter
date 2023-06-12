@@ -1,0 +1,14 @@
+/* Another example for return-stmt WITHOUT the return result */
+
+a = 0;
+
+function recursionPlus(num) {
+    println(num);
+    num = num + 1;
+    if (num > 5) {
+        return;
+    }
+    recursionPlus(num);
+}
+
+recursionPlus(a);
