@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b51bc32b-9370-4828-88a8-140326bdb18d" name="Default Changelist" comment="Теперь, если кол-во фактических аргументов функции меньше кол-ва формальных, то в качестве недостоющих аргументов передается null.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="b51bc32b-9370-4828-88a8-140326bdb18d" name="Default Changelist" comment="Небольшие правки в test07.txt и в интерпретаторе.">
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/Program.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/intepreter/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/intepreter/Interpreter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/input/test01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/input/test01.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/input/test07.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/input/test07.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +70,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.test07">
+  <component name="RunManager" selected="Application.test01">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -214,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686599076516</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Небольшие правки в test07.txt и в интерпретаторе.">
+      <created>1686604576262</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686604576262</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -252,7 +257,8 @@
     <MESSAGE value="ReturnValue и некоторые другие правки" />
     <MESSAGE value="Добавлены новые комбинации в BinaryOpTypeCompatibility" />
     <MESSAGE value="Теперь, если кол-во фактических аргументов функции меньше кол-ва формальных, то в качестве недостоющих аргументов передается null." />
-    <option name="LAST_COMMIT_MESSAGE" value="Теперь, если кол-во фактических аргументов функции меньше кол-ва формальных, то в качестве недостоющих аргументов передается null." />
+    <MESSAGE value="Небольшие правки в test07.txt и в интерпретаторе." />
+    <option name="LAST_COMMIT_MESSAGE" value="Небольшие правки в test07.txt и в интерпретаторе." />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

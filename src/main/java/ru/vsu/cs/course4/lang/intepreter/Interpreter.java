@@ -4,8 +4,25 @@ import ru.vsu.cs.course4.lang.ast.*;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Interpreter {
+    private static final Map<String, Object> runtimeMethodsAndFields;
+
+    static {
+        runtimeMethodsAndFields = new HashMap<>();
+
+        Class<Runtime> cls = Runtime.class;
+        for (Method m : cls.getDeclaredMethods()) {
+            runtimeMethodsAndFields.put(m.getName(), m);
+        }
+
+        for (Field f : cls.getFields()) {
+            runtimeMethodsAndFields.put(f.getName(), f);
+        }
+    }
+
     public static Object exec(AstNode node, Scope scope) throws InterpreterException {
         if (node instanceof AssignNode) {
             return exec((AssignNode)  node, scope);
@@ -147,7 +164,7 @@ public class Interpreter {
             }
 
         } else {
-            throw new InterpreterException("Error while calling Func");
+            throw new InterpreterException("Error while calling Func" + object);
         }
     }
 
@@ -160,22 +177,10 @@ public class Interpreter {
         try {
             return scope.findVar(node.getName());
         } catch (InterpreterException e) {
-            Class<Runtime> cls = Runtime.class;
-
-            Method[] methods = cls.getDeclaredMethods();
-            for (Method m : methods) {
-                if (m.getName().equals(node.getName())) {
-                    return m;
-                }
+            Object obj = runtimeMethodsAndFields.get(node.getName());
+            if (obj != null) {
+                return obj;
             }
-
-            Field[] fields = cls.getFields();
-            for (Field f : fields) {
-                if (f.getName().equals(node.getName())) {
-                    return f;
-                }
-            }
-
             throw new InterpreterException("Didn't find anything");
         }
     }
