@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b51bc32b-9370-4828-88a8-140326bdb18d" name="Default Changelist" comment="Added support for exponential number notation.">
+    <list default="true" id="b51bc32b-9370-4828-88a8-140326bdb18d" name="Default Changelist" comment="Edits in Runtime functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/intepreter/Runtime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/intepreter/Runtime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/intepreter/Interpreter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/intepreter/Interpreter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/javacc/ru/vsu/cs/course4/lang/Parser.jj" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/javacc/ru/vsu/cs/course4/lang/Parser.jj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/input/test01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/input/test01.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +71,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.test01">
+  <component name="RunManager" selected="Application.test07">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -240,7 +241,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686645392781</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Edits in Runtime functions">
+      <created>1686645895370</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1686645895370</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -282,7 +290,8 @@
     <MESSAGE value="Создала словарь, в который помещаются все методы и поля" />
     <MESSAGE value="Дерево печатается, если указаны соответствующие ключевые параметры." />
     <MESSAGE value="Added support for exponential number notation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added support for exponential number notation." />
+    <MESSAGE value="Edits in Runtime functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Edits in Runtime functions" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

@@ -136,7 +136,8 @@ public class Interpreter {
             StmtListNode stmts = (StmtListNode) function.getStatements();
 
             try {
-                return exec(stmts, newScope);
+                exec(stmts, newScope);
+                return null;
             } catch (ReturnValue rv) {
                 return rv.getValue();
             }
