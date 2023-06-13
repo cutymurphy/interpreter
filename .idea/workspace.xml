@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b51bc32b-9370-4828-88a8-140326bdb18d" name="Default Changelist" comment="Создала словарь, в который помещаются все методы и поля">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/Program.java" afterDir="false" />
+    <list default="true" id="b51bc32b-9370-4828-88a8-140326bdb18d" name="Default Changelist" comment="Дерево печатается, если указаны соответствующие ключевые параметры.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/ast/ValueNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/vsu/cs/course4/lang/ast/ValueNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/javacc/ru/vsu/cs/course4/lang/Parser.jj" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/javacc/ru/vsu/cs/course4/lang/Parser.jj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/input/test01.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/input/test01.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,18 +48,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "D:/OneDrive/Документы/GitHub/interpreter",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propDebugger"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/OneDrive/Документы/GitHub/interpreter&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propDebugger&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -69,7 +71,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.test05">
+  <component name="RunManager" selected="Application.test01">
     <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
@@ -123,7 +125,7 @@
       <option name="ALTERNATIVE_JRE_PATH" value="18" />
       <option name="MAIN_CLASS_NAME" value="ru.vsu.cs.course4.lang.Program" />
       <module name="interpreter" />
-      <option name="PROGRAM_PARAMETERS" value="./test/input/test05.txt -tree" />
+      <option name="PROGRAM_PARAMETERS" value="./test/input/test05.txt" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -225,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686605785947</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Дерево печатается, если указаны соответствующие ключевые параметры.">
+      <created>1686606218299</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686606218299</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +274,8 @@
     <MESSAGE value="Теперь, если кол-во фактических аргументов функции меньше кол-ва формальных, то в качестве недостоющих аргументов передается null." />
     <MESSAGE value="Небольшие правки в test07.txt и в интерпретаторе." />
     <MESSAGE value="Создала словарь, в который помещаются все методы и поля" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создала словарь, в который помещаются все методы и поля" />
+    <MESSAGE value="Дерево печатается, если указаны соответствующие ключевые параметры." />
+    <option name="LAST_COMMIT_MESSAGE" value="Дерево печатается, если указаны соответствующие ключевые параметры." />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

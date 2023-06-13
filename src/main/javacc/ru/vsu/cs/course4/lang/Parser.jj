@@ -24,6 +24,7 @@ TOKEN: {
 TOKEN: {
     <INT_VALUE: ("-")? (<DIGIT>)+>
   | <FLOAT_VALUE: <INT_VALUE> "." (<DIGIT>)* | "." (<DIGIT>)+>
+  | <SCIENTIFIC_NOTATION_VALUE: (<INT_VALUE> | <FLOAT_VALUE>) ("e"|"E") ("+"|"-")? (<DIGIT>)+>
   | <#ESCAPE: "\\" ["n","t","b","r","f","\\","\"","\'"]>
   | <CHAR_VALUE: "\'" (~["\'","\\"]|<ESCAPE>) "\'">
   | <STRING_VALUE: "\"" (~["\""])* "\"">
@@ -50,6 +51,7 @@ ValueNode value(): { Token val; } {
          val=<INT_VALUE>
        | val=<FLOAT_VALUE>
        | val=<STRING_VALUE>
+       | val=<SCIENTIFIC_NOTATION_VALUE>
     )
     { return new ValueNode(val.image); }
 }

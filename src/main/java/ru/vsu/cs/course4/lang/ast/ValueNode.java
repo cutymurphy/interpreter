@@ -15,7 +15,7 @@ public class ValueNode implements ExprNode {
             this.value = str.substring(1, str.length() - 1);
         } else {
             try {
-                if (str.contains(".")) {
+                if (str.contains(".") || str.toLowerCase().contains("e")) {
                     this.value = Double.parseDouble(str);
                 } else {
                     this.value = Integer.parseInt(str);
