@@ -15,7 +15,7 @@ PARSER_END(Parser)
 SKIP:  {
     <WS: " " | "\t" | "\r" | "\n" | "\r\n">
   | <SINGLE_LINE_COMMENT: "//" (~["\n","\r"])* ("\n"|"\r"|"\r\n")>
-  | <MULTI_LINE_COMMENT: "/*"(~["/"])*  "*""/">
+  | <MULTI_LINE_COMMENT: "/*"(~["/"])*  "*/">
 }
 TOKEN: {
     <#LETTER: ["a"-"z", "A"-"Z", "_"]>

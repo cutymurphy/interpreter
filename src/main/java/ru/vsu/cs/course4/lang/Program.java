@@ -28,7 +28,6 @@ public class Program {
         }
 
         Scope scope = new Scope(null);
-        Object res = Interpreter.exec(result, scope);
-        System.out.println(res);
+        Interpreter.exec(result, scope);
     }
 }
