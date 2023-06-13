@@ -1,11 +1,4 @@
-/* Just some math operations */
-
-println(3.14E-2);
-println(3.14E+00);
-println(1e-9 / 2);
-println(2.5e3);
-println(pow(2.0e3, -2.5e-1));
-println(2.5e2 + 1.8e-1 * 3.2e-3);
+/* some functions with and without return */
 
 function func1(c) {
     println(c);
@@ -14,7 +7,7 @@ func1(6);
 o = func1(6);
 println(o);
 
-/* function func2(c) {
+function func2(c) {
     if (c == 0) {
         return;
     } else {
@@ -22,4 +15,4 @@ println(o);
     }
 }
 o = func2(0);
-println(o); */
+println(o);
