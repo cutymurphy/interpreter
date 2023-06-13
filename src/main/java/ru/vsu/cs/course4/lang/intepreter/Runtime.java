@@ -47,6 +47,8 @@ public class Runtime {
     public static Object sin(Object o) {
         if (o instanceof Double) {
             return Math.sin((Double) o);
+        } else if (o instanceof Integer) {
+            return Math.sin((Integer) o);
         } else {
             throw new IllegalArgumentException("Wrong type!");
         }
@@ -55,6 +57,8 @@ public class Runtime {
     public static Object cos(Object o) {
         if (o instanceof Double) {
             return Math.cos((Double) o);
+        } else if (o instanceof Integer) {
+            return Math.cos((Integer) o);
         } else {
             throw new IllegalArgumentException("Wrong type!");
         }
@@ -63,6 +67,8 @@ public class Runtime {
     public static Object tan(Object o) {
         if (o instanceof Double) {
             return Math.tan((Double) o);
+        } else if (o instanceof Integer) {
+            return Math.tan((Integer) o);
         } else {
             throw new IllegalArgumentException("Wrong type!");
         }
@@ -71,6 +77,8 @@ public class Runtime {
     public static Object ctan(Object o) {
         if (o instanceof Double) {
             return 1.0 / Math.tan((Double) o);
+        } else if (o instanceof Integer) {
+            return 1.0 / Math.tan((Integer) o);
         } else {
             throw new IllegalArgumentException("Wrong type!");
         }
@@ -79,6 +87,12 @@ public class Runtime {
     public static Object pow(Object a, Object b) {
         if (a instanceof Double && b instanceof Integer) {
             return Math.pow((Double) a, (Integer) b);
+        } else if (a instanceof Integer && b instanceof Double) {
+            return Math.pow((Integer) a, (Double) b);
+        } else if (a instanceof Integer && b instanceof Integer) {
+            return Math.pow((Integer) a, (Integer) b);
+        } else if (a instanceof Double && b instanceof Double) {
+            return Math.pow((Double) a, (Double) b);
         } else {
             throw new IllegalArgumentException("Wrong type!");
         }
@@ -97,6 +111,8 @@ public class Runtime {
     public static Object cbrt(Object o) {
         if (o instanceof Double) {
             return Math.cbrt((Double) o);
+        } else if (o instanceof Integer) {
+            return Math.cbrt((Integer) o);
         } else {
             throw new IllegalArgumentException("Wrong type!");
         }
@@ -105,6 +121,8 @@ public class Runtime {
     public static Object floor(Object o) {
         if (o instanceof Double) {
             return Math.floor((Double) o);
+        } else if (o instanceof Integer) {
+            return Math.floor((Integer) o);
         } else {
             throw new IllegalArgumentException("Wrong type!");
         }
@@ -113,6 +131,8 @@ public class Runtime {
     public static Object ceil(Object o) {
         if (o instanceof Double) {
             return Math.ceil((Double) o);
+        } else if (o instanceof Integer) {
+            return Math.ceil((Integer) o);
         } else {
             throw new IllegalArgumentException("Wrong type!");
         }
@@ -123,6 +143,10 @@ public class Runtime {
             return Math.max((Integer) a, (Integer) b);
         } else if (a instanceof Double && b instanceof Double) {
             return Math.max((Double) a, (Double) b);
+        } else if (a instanceof Integer && b instanceof Double) {
+            return Math.max((Integer) a, (Double) b);
+        } else if (a instanceof Double && b instanceof Integer) {
+            return Math.max((Double) a, (Integer) b);
         } else {
             throw new IllegalArgumentException("Wrong type!");
         }
@@ -133,6 +157,10 @@ public class Runtime {
             return Math.min((Integer) a, (Integer) b);
         } else if (a instanceof Double && b instanceof Double) {
             return Math.min((Double) a, (Double) b);
+        } else if (a instanceof Integer && b instanceof Double) {
+            return Math.min((Integer) a, (Double) b);
+        } else if (a instanceof Double && b instanceof Integer) {
+            return Math.min((Double) a, (Integer) b);
         } else {
             throw new IllegalArgumentException("Wrong type!");
         }
@@ -141,6 +169,8 @@ public class Runtime {
     public static Object log(Object o) {
         if (o instanceof Double) {
             return Math.log((Double) o);
+        } else if (o instanceof Integer) {
+            return Math.log((Integer) o);
         } else {
             throw new IllegalArgumentException("Wrong type!");
         }
@@ -149,6 +179,8 @@ public class Runtime {
     public static Object log10(Object o) {
         if (o instanceof Double) {
             return Math.log10((Double) o);
+        } else if (o instanceof Integer) {
+            return Math.log10((Integer) o);
         } else {
             throw new IllegalArgumentException("Wrong type!");
         }
